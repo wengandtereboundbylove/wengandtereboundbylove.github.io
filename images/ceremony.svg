@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="520" viewBox="0 0 800 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="520" rx="30" fill="#1E3154"/>
+  <rect x="60" y="320" width="680" height="140" rx="20" fill="#283A63"/>
+  <path d="M200 320C200 260 260 220 320 220H480C540 220 600 260 600 320" stroke="#E9E3D2" stroke-width="18" stroke-linecap="round"/>
+  <path d="M320 220L320 120" stroke="#E9E3D2" stroke-width="14" stroke-linecap="round"/>
+  <path d="M480 220L480 120" stroke="#E9E3D2" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="320" cy="100" r="20" fill="#E9E3D2"/>
+  <circle cx="480" cy="100" r="20" fill="#E9E3D2"/>
+  <path d="M160 360H640" stroke="#7F9FC5" stroke-width="18" stroke-linecap="round"/>
+  <path d="M220 430H580" stroke="#7F9FC5" stroke-width="10" stroke-linecap="round"/>
+  <path d="M320 220C320 190 350 170 380 170C410 170 440 190 440 220" stroke="#E9E3D2" stroke-width="12" stroke-linecap="round"/>
+  <path d="M320 220C320 190 290 170 260 170C230 170 200 190 200 220" stroke="#E9E3D2" stroke-width="12" stroke-linecap="round"/>
+  <text x="400" y="480" text-anchor="middle" fill="#E9E3D2" font-family="Montserrat, sans-serif" font-size="28">Ceremony</text>
+</svg>

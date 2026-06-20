@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP | Rowell & Teresa</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="rsvp-header">
+        <a href="../index.html" class="back-btn">Back to Invitation</a>
+
+        <p class="subtitle">WE CAN'T WAIT TO CELEBRATE WITH YOU</p>
+
+        <h1>RSVP</h1>
+
+        <div class="divider"></div>
+
+        <p class="description">
+            Kindly let us know if you'll be joining us on our special day.
+        </p>
+    </header>
+
+    <main class="rsvp-container">
+        <section class="rsvp-card">
+            <h2>Confirm Your Attendance</h2>
+
+            <form id="rsvpForm">
+                <div class="form-group">
+                    <label for="guestName">Guest Name</label>
+                    <input type="text" id="guestName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <span class="group-label">Will you attend?</span>
+
+                    <div class="attendance-options">
+                        <label class="option-card">
+                            <input type="radio" name="attendance" value="Yes" required>
+                            <span>Joyfully Accepts</span>
+                        </label>
+
+                        <label class="option-card">
+                            <input type="radio" name="attendance" value="No">
+                            <span>Regretfully Declines</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="guestCount">Number of Guests</label>
+                    <select id="guestCount">
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="songRequest">Song Request</label>
+                    <input type="text" id="songRequest" placeholder="Song title">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message to the Couple</label>
+                    <textarea id="message" rows="5" placeholder="Leave your well wishes here..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit RSVP</button>
+                <p class="form-status" id="formStatus" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="rsvp-card success-card" id="successCard" hidden>
+            <div class="success-icon">&hearts;</div>
+            <h2>Thank You!</h2>
+            <p>Your RSVP has been sent.</p>
+            <a href="../index.html" class="submit-btn">Return to Invitation</a>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
