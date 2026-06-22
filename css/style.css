@@ -272,11 +272,8 @@ section h2 {
     padding: 140px 30px 100px;
 
     background:
-        linear-gradient(
-            rgba(241, 229, 209, 0.28),
-            rgba(152, 112, 112, 0.40)
-        ),
-        url("../images/hero.jpg");
+        radial-gradient(circle at top, rgba(219, 181, 181, 0.22), transparent 34%),
+        linear-gradient(180deg, var(--bg-light), var(--bg));
 
     background-size: cover;
     background-position: center;
@@ -469,6 +466,116 @@ section h2 {
     color: rgba(241,229,209,0.8);
 }
 
+.invitation-note {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.invitation-note p {
+    font-family: var(--font-heading);
+    font-size: clamp(1.55rem, 4vw, 2.2rem);
+    line-height: 1.45;
+    color: var(--text-dark);
+    text-wrap: balance;
+}
+
+.invitation-signature {
+    margin-top: 26px;
+    letter-spacing: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    opacity: 0.72;
+}
+
+.quick-details {
+    width: min(100%, 920px);
+    margin: 0 auto 36px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.quick-detail {
+    padding: 24px 18px;
+    border: 1px solid var(--border-light);
+    background: rgba(241, 229, 209, 0.08);
+    text-align: center;
+}
+
+.quick-detail span,
+.map-note span,
+.memory-note span {
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: rgba(219, 181, 181, 0.92);
+}
+
+.quick-detail strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.65rem;
+    font-weight: 500;
+    line-height: 1.15;
+    color: var(--cream);
+}
+
+.quick-detail small {
+    display: block;
+    margin-top: 8px;
+    color: rgba(241, 229, 209, 0.76);
+}
+
+.detail-grid {
+    width: min(100%, 920px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.map-note,
+.memory-note {
+    width: min(100%, 820px);
+    margin: 0 auto 28px;
+    padding: 26px 28px;
+    border: 1px solid var(--border-light);
+    background: rgba(241, 229, 209, 0.07);
+    text-align: center;
+}
+
+.map-note p,
+.memory-note p {
+    max-width: 660px;
+    margin: 0 auto;
+    color: rgba(241, 229, 209, 0.88);
+}
+
+.memory-note {
+    margin-top: 26px;
+}
+
+.story-footnote {
+    width: min(100%, 720px);
+    margin: 34px auto 0;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: rgba(59, 38, 52, 0.84);
+}
+
+.gift-note {
+    max-width: 680px;
+    margin: 26px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(219, 181, 181, 0.22);
+    color: rgba(241, 229, 209, 0.88);
+    text-align: center;
+}
+
 
 /* ==========================================
    CONTENT BLOCKS
@@ -487,7 +594,8 @@ section h2 {
 .music-player,
 .map-grid,
 .gift-card,
-.entourage-card {
+.entourage-card,
+.invitation-note {
     width: min(100%, 820px);
     margin-left: auto;
     margin-right: auto;
@@ -537,8 +645,8 @@ section h2 {
 }
 
 .detail-card {
-    width: min(100%, 620px);
-    margin: 0 auto 26px;
+    width: 100%;
+    margin: 0;
     padding-top: 18px;
 }
 
@@ -1206,6 +1314,14 @@ section h2 {
         grid-template-columns: 1fr;
     }
 
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-details {
+        grid-template-columns: 1fr;
+    }
+
     .sponsor-grid {
         grid-template-columns: 1fr;
     }
@@ -1269,7 +1385,10 @@ section h2 {
     .entourage-card,
     .music-player,
     .faq-item,
-    .map-card {
+    .map-card,
+    .quick-detail,
+    .map-note,
+    .memory-note {
         padding-left: 20px;
         padding-right: 20px;
     }
