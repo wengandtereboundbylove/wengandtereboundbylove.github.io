@@ -1002,6 +1002,27 @@ section h2 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+.qr-code-button {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.qr-code-button:hover .qr-code {
+    transform: scale(1.06);
+    border-color: rgba(219, 181, 181, 0.6);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.qr-code-button:focus-visible {
+    outline: 2px solid var(--rose);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
 .qr-label {
     font-size: 13px;
     letter-spacing: 2px;
@@ -1014,16 +1035,31 @@ section h2 {
 
 .photo-qr-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-top: 14px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.photo-qr-container .qr-code-button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .photo-qr {
     width: 100px;
     height: 100px;
-    border: 1px solid rgba(59, 38, 52, 0.22);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.04);
+    border: 2px solid rgba(219, 181, 181, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 6px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Attire-specific overrides: left-align guidance and space the palette */
