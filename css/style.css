@@ -48,9 +48,13 @@ body {
     background: var(--bg);
     color: var(--white);
     font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 300;
     overflow-x: hidden;
     line-height: 1.8;
     min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 img {
@@ -77,6 +81,8 @@ iframe {
 
 section {
     padding: 90px 24px;
+    position: relative;
+    overflow: hidden;
 }
 
 .dark-section {
@@ -85,7 +91,7 @@ section {
 }
 
 .light-section {
-    background: var(--cream);
+    background: linear-gradient(180deg, #f8ebdc 0%, var(--cream) 100%);
     color: var(--text-dark);
 }
 
@@ -100,15 +106,17 @@ section {
     font-size: 11px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    opacity: 0.7;
+    opacity: 0.78;
+    font-weight: 500;
 }
 
 section h2 {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 4.8vw, 3rem);
     font-weight: 500;
     text-align: center;
-    line-height: 1;
+    line-height: 1.1;
+    letter-spacing: 0.4px;
 }
 
 .section-divider {
@@ -148,8 +156,9 @@ section h2 {
     align-items: center;
     justify-content: flex-start;
 
-    padding: 18px 18px;
+    padding: 16px 18px;
     border-bottom: 1px solid rgba(219, 181, 181, 0.24);
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.16);
 }
 
 .navbar nav {
@@ -190,16 +199,17 @@ section h2 {
 
 .navbar nav a {
     color: var(--text-light);
-
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 10px;
-
+    padding: 7px 10px;
+    border-radius: 999px;
     transition: var(--transition);
 }
 
 .navbar nav a:hover {
     color: var(--rose);
+    background: rgba(219, 181, 181, 0.12);
 }
 
 .music-btn,
@@ -293,28 +303,33 @@ section h2 {
 .hero-content {
     position: relative;
     z-index: 2;
-
-    max-width: 600px;
-    width: min(100%, 600px);
+    max-width: 640px;
+    width: min(100%, 640px);
+    padding: 46px 32px;
+    border: 1px solid rgba(219, 181, 181, 0.26);
+    border-radius: 24px;
+    background: rgba(58, 38, 55, 0.24);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(6px);
 }
 
 .hero .subtitle {
     text-transform: uppercase;
     letter-spacing: 6px;
     font-size: 11px;
-
     color: rgba(241, 229, 209, 0.88);
-
-    margin-bottom: 35px;
+    margin-bottom: 28px;
+    font-weight: 500;
 }
 
 .hero h1 {
     font-family: var(--font-heading);
     font-size: clamp(4.4rem, 12vw, 8rem);
     font-weight: 500;
-
     line-height: 0.95;
     overflow-wrap: anywhere;
+    letter-spacing: 0.5px;
+    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .hero h1 span {
@@ -356,23 +371,30 @@ section h2 {
 .date {
     letter-spacing: 6px;
     font-size: 18px;
-
     text-transform: uppercase;
+    margin-bottom: 10px;
+    text-wrap: balance;
+    font-weight: 500;
+}
 
+.event-time {
+    letter-spacing: 6px;
+    font-size: 18px;
+    text-transform: uppercase;
     margin-bottom: 18px;
     text-wrap: balance;
+    font-weight: 500;
+    color: var(--cream);
 }
 
 .venue {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-
-    font-style: italic;
-
-    color: rgba(246, 232, 219, 0.95);
-
-    margin-bottom: 35px;
+    letter-spacing: 6px;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
     text-wrap: balance;
+    font-weight: 500;
+    color: rgba(246, 232, 219, 0.95);
 }
 
 .venue-label {
@@ -395,18 +417,15 @@ section h2 {
 .ceremony-tag {
     display: inline-block;
     max-width: 100%;
-
     border: 1px solid rgba(219, 181, 181, 0.4);
     background: rgba(241, 229, 209, 0.1);
-
     padding: 15px 28px;
-
     letter-spacing: 3px;
     font-size: 11px;
-
     color: var(--cream);
     text-transform: uppercase;
     overflow-wrap: break-word;
+    border-radius: 999px;
 }
 
 
@@ -416,9 +435,9 @@ section h2 {
 
 .countdown-section {
     background: linear-gradient(180deg, rgba(241,229,209,0.18), rgba(217,181,181,0.16));
-
     padding: 80px 24px;
     text-align: center;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
 .small-heading {
@@ -470,6 +489,11 @@ section h2 {
     max-width: 760px;
     margin: 0 auto;
     text-align: center;
+    padding: 34px 28px;
+    border: 1px solid rgba(152, 112, 112, 0.16);
+    border-radius: 22px;
+    background: rgba(255,255,255,0.58);
+    box-shadow: 0 14px 36px rgba(152, 112, 112, 0.12);
 }
 
 .invitation-note p {
@@ -523,6 +547,16 @@ section h2 {
     color: var(--cream);
 }
 
+.quick-detail strong .time-period {
+    display: inline;
+    margin-bottom: 0;
+    letter-spacing: 0;
+    font-size: 0.72em;
+    text-transform: uppercase;
+    color: inherit;
+    opacity: 0.9;
+}
+
 .quick-detail small {
     display: block;
     margin-top: 8px;
@@ -535,6 +569,34 @@ section h2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
+}
+
+.guest-info-grid {
+    width: min(100%, 920px);
+    margin: 24px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.guest-info-card {
+    padding: 24px 18px;
+    border: 1px solid var(--border-light);
+    background: rgba(241, 229, 209, 0.07);
+    text-align: center;
+}
+
+.guest-info-card span {
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: rgba(219, 181, 181, 0.92);
+}
+
+.guest-info-card p {
+    color: rgba(241, 229, 209, 0.88);
 }
 
 .map-note,
@@ -565,6 +627,7 @@ section h2 {
     font-family: var(--font-heading);
     font-size: 1.35rem;
     color: rgba(59, 38, 52, 0.84);
+    letter-spacing: 0.2px;
 }
 
 .gift-note {
@@ -633,6 +696,8 @@ section h2 {
     border: 1px solid var(--border-light);
     background: rgba(241, 229, 209, 0.08);
     padding: 34px 28px;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
 }
 
 .light-section .story-item,
@@ -641,7 +706,7 @@ section h2 {
 .light-section .faq-item {
     border-color: var(--border-dark);
     background: var(--white);
-    box-shadow: 0 12px 35px rgba(152, 112, 112, 0.12);
+    box-shadow: 0 14px 36px rgba(152, 112, 112, 0.14);
 }
 
 .detail-card {
@@ -694,7 +759,7 @@ section h2 {
     margin: 0 auto 22px;
     padding: 0;
     border: 1px solid rgba(152, 112, 112, 0.22);
-    border-radius: 8px;
+    border-radius: 12px;
     background: transparent;
     cursor: pointer;
     overflow: hidden;
@@ -912,6 +977,55 @@ section h2 {
     text-align: center;
 }
 
+.qr-codes-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.qr-code-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.qr-code {
+    width: 140px;
+    height: 140px;
+    border: 2px solid rgba(219, 181, 181, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 6px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.qr-label {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin: 0;
+    font-weight: 600;
+    color: var(--rose);
+}
+
+.photo-qr-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.photo-qr {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(59, 38, 52, 0.22);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
 /* Attire-specific overrides: left-align guidance and space the palette */
 .dark-section#attire .attire-text {
     text-align: left;
@@ -1010,16 +1124,14 @@ section h2 {
 }
 
 .gift-options {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
     justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    margin-top: 8px;
+    margin-top: 28px;
 }
 
 .gift-options div {
-    flex: 1 1 240px;
     padding: 28px;
     border: none;
     background: rgba(241, 229, 209, 0.08);
@@ -1031,6 +1143,29 @@ section h2 {
     flex-direction: column;
     gap: 8px;
     align-items: center;
+}
+
+.gift-details-featured {
+    padding: 36px 32px;
+    background: rgba(219, 181, 181, 0.1);
+    border: 1px solid rgba(219, 181, 181, 0.24);
+    border-radius: 14px;
+    margin: 32px 0 20px 0;
+    text-align: center;
+}
+
+.gift-details-featured h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--rose);
+    margin-bottom: 12px;
+}
+
+.gift-details-featured p {
+    color: rgba(241, 229, 209, 0.88);
+    font-size: 0.98rem;
+    line-height: 1.6;
 }
 
 .gift-options h3 {
@@ -1318,6 +1453,10 @@ section h2 {
         grid-template-columns: 1fr;
     }
 
+    .guest-info-grid {
+        grid-template-columns: 1fr;
+    }
+
     .quick-details {
         grid-template-columns: 1fr;
     }
@@ -1387,10 +1526,15 @@ section h2 {
     .faq-item,
     .map-card,
     .quick-detail,
+    .guest-info-card,
     .map-note,
     .memory-note {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .sponsor-grid {
+        grid-template-columns: 1fr;
     }
 
     .map-card {
