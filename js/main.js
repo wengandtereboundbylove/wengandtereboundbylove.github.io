@@ -176,6 +176,9 @@ document.querySelectorAll(".faq-item")
 const storyPhotoButtons =
     document.querySelectorAll(".story-photo");
 
+const qrCodeButtons =
+    document.querySelectorAll(".qr-code-button");
+
 const photoLightbox =
     document.getElementById("photoLightbox");
 
@@ -200,6 +203,22 @@ function closePhotoLightbox() {
     document.body.style.overflow = "";
 }
 
+function openPhotoLightbox(fullImage, caption) {
+
+    if (!photoLightbox || !photoLightboxImage) return;
+
+    photoLightboxImage.src = fullImage;
+    photoLightboxImage.alt = caption;
+
+    if (photoLightboxCaption)
+        photoLightboxCaption.textContent = caption;
+
+    photoLightbox.classList.add("open");
+    photoLightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+}
+
 storyPhotoButtons.forEach(button => {
 
     button.addEventListener("click", () => {
@@ -215,15 +234,23 @@ storyPhotoButtons.forEach(button => {
         const caption =
             button.dataset.caption || image?.alt || "";
 
-        photoLightboxImage.src = fullImage;
-        photoLightboxImage.alt = caption;
+        openPhotoLightbox(fullImage, caption);
 
-        if (photoLightboxCaption)
-            photoLightboxCaption.textContent = caption;
+    });
 
-        photoLightbox.classList.add("open");
-        photoLightbox.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
+});
+
+qrCodeButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const fullImage =
+            button.dataset.full || "";
+
+        const caption =
+            button.dataset.caption || "";
+
+        openPhotoLightbox(fullImage, caption);
 
     });
 
