@@ -80,7 +80,7 @@
     </section>
 
     <!-- COUNTDOWN -->
-    <section class="countdown-section">
+    <section class="countdown-section" id="countdown">
 
         <p class="small-heading">
             COUNTING DOWN TO FOREVER
@@ -159,11 +159,11 @@
                     <button
                         class="story-photo"
                         type="button"
-                        data-full="assets/pinindot.jpg"
+                        data-full="assets/pinindot.png"
                         data-caption="Ay pinindot - January 19, 2020">
 
                         <img
-                            src="assets/pinindot.jpg"
+                            src="assets/pinindot.png"
                             alt="Photo memory from January 19, 2020">
 
                     </button>
@@ -191,11 +191,11 @@
                     <button
                         class="story-photo"
                         type="button"
-                        data-full="assets/reception.jpg"
+                        data-full="assets/against_all_odds.gif"
                         data-caption="Against All Odds - March 19, 2020">
 
                         <img
-                            src="assets/reception.jpg"
+                            src="assets/against_all_odds.gif"
                             alt="Photo memory from March 19, 2020">
 
                     </button>
@@ -223,11 +223,11 @@
                     <button
                         class="story-photo"
                         type="button"
-                        data-full="assets/ceremony.jpg"
+                        data-full="assets/she_said_yes.gif"
                         data-caption="She Said Yes - December 26, 2025">
 
                         <img
-                            src="assets/ceremony.jpg"
+                            src="assets/she_said_yes.gif"
                             alt="Photo memory from December 26, 2025">
 
                     </button>
@@ -263,19 +263,19 @@
         <div class="section-divider"></div>
 
         <div class="quick-details">
-            <div class="quick-detail">
+            <div class="quick-detail" data-scroll-target="#countdown">
                 <span>Date</span>
                 <strong>March 20, 2027</strong>
                 <small>Saturday</small>
             </div>
 
-            <div class="quick-detail">
+            <div class="quick-detail" data-scroll-target="#getting-there">
                 <span>Ceremony Venue</span>
                 <strong>Hesus Mabuting Pastol Parish</strong>
                 <small>Concepcion, Tarlac</small>
             </div>
 
-            <div class="quick-detail">
+            <div class="quick-detail" data-scroll-target="#getting-there">
                 <span>Reception Venue</span>
                 <strong>Abanillas Banquet and Events Hall</strong>
                 <small>Capas, Tarlac</small>
@@ -304,7 +304,9 @@
 
             <div class="detail-card">
 
-                <img src="assets/ceremony.jpg" alt="Hesus Mabuting Pastol Parish" class="detail-image">
+                <button class="story-photo venue-photo" type="button" data-full="assets/church.jpg" data-caption="Hesus Mabuting Pastol Parish">
+                    <img src="assets/church.jpg" alt="Hesus Mabuting Pastol Parish" class="detail-image">
+                </button>
 
                 <p class="label">
                     THE CHURCH BLESSING
@@ -325,7 +327,9 @@
 
             <div class="detail-card">
 
-                <img src="assets/reception.jpg" alt="Abanillas Banquet and Events Hall" class="detail-image">
+                <button class="story-photo venue-photo" type="button" data-full="assets/reception.jpg" data-caption="Abanillas Banquet and Events Hall">
+                    <img src="assets/reception.jpg" alt="Abanillas Banquet and Events Hall" class="detail-image">
+                </button>
 
                 <p class="label">
                     THE CELEBRATION
@@ -364,8 +368,8 @@
             <div class="guest-info-card">
                 <span>Wedding Day Contact</span>
                 <p>
-                    For questions on the wedding day, please contact Rowell
-                    or Teresa.
+                    For questions on the wedding day, please contact Rowell at 09217548574
+                    or Teresa at 09155064782.
                 </p>
             </div>
         </div>
@@ -373,7 +377,7 @@
     </section>
 
     <!-- MAP -->
-    <section class="dark-section">
+    <section class="dark-section" id="getting-there">
 
         <div class="map-note">
             <span>Getting There</span>
@@ -590,24 +594,25 @@
 
         <div class="attire-content">
             <p class="attire-text attire-heading">
-                Suggested dress code — <strong>Semi-formal / Cocktail</strong>
+                <strong>Suggested dress code — Semi-formal / Cocktail</strong>
             </p>
 
             <p class="attire-text">
-                For guests: <strong>Men</strong> — dress shirt, slacks, blazer (tie optional). <strong>Women</strong> — cocktail dress, dressy skirt or jumpsuit.
+                <strong>For Gentlemen:</strong> — Polo shirt, collared shirt, or polo paired with slacks or trousers in khaki, black, or other appropriate colors. 
             </p>
 
             <p class="attire-text">
-                Ceremony note: This is a church ceremony; please wear modest attire (covered shoulders, no low-cut necklines).
+                <strong>For Ladies:</strong> — Cocktail dress, dressy skirt and blouse, terno, slacks with a formal/semi-formal top, or a classy jumpsuit.
             </p>
 
             <p class="attire-text">
-                Venue tip: The reception includes outdoor garden photos — comfortable shoes recommended.
+                As our wedding ceremony will be held in a church, we kindly ask our guests to wear modest and appropriate attire.
             </p>
 
             <p class="attire-text">
-                Color request: Please avoid wearing white to respect the couple.
+                Thank you for helping us make our celebration even more special.
             </p>
+
         </div>
 
         <div class="memory-note">
@@ -665,13 +670,13 @@
 
                 <div>
                     <h3>
-                        Gift Registry
+                        Warmest Blessings
                     </h3>
 
                     <p>
-                        We have curated a registry with items that will help us
-                        build our home and life together. Thank you for being part
-                        of our journey.
+                        Your heartfelt blessings and kind thoughts mean so much to 
+                        us as we begin this new chapter together. Thank you for sharing 
+                        in the joy of our special day.
                     </p>
                 </div>
 
@@ -681,8 +686,8 @@
                     </h3>
 
                     <p>
-                        Please know that sharing this intimate celebration with
-                        us is already a beautiful gift.
+                        Please know that being with us on our special day is
+                        the greatest gift we could ask for.
                     </p>
                 </div>
 
@@ -694,7 +699,7 @@
                 </h3>
 
                 <p style="margin-bottom: 28px;">
-                    A gift box will be available at the reception. For digital gifts, scan below:
+                    For digital gifts, scan below:
                 </p>
 
                 <div class="qr-codes-container">
@@ -703,10 +708,10 @@
                             class="qr-code-button"
                             type="button"
                             data-full="assets/gcash-qr.png"
-                            data-caption="GCash QR Code">
-                            <img src="assets/gcash-qr.png" alt="GCash QR Code" class="qr-code">
+                            data-caption="GoTyme QR Code">
+                            <img src="assets/gcash-qr.png" alt="GoTyme QR Code" class="qr-code">
                         </button>
-                        <p class="qr-label">GCash</p>
+                        <p class="qr-label">GoTyme</p>
                     </div>
                     <div class="qr-code-item">
                         <button
@@ -722,8 +727,8 @@
             </div>
 
             <p class="gift-note">
-                For your convenience, a small gift box will be available at the
-                reception venue.
+                For guests who may not have access to online banking, your monetary 
+                gift may be personally entrusted to the couple during the reception.
             </p>
 
         </div>
@@ -996,11 +1001,10 @@
 
             <div class="faq-answer">
                 <p>
-                    The church ceremony will be indoors at Hesus Mabuting Pastol Parish. 
-                    The reception will be held indoors at Abanillas Banquet and Events Hall, 
-                    a family-owned catering and event venue proudly operated by the team behind 
-                    Konsepto by K & E Catering Services. The indoor setting ensures comfort 
-                    for all our guests throughout the celebration.
+                    The church ceremony will be held indoors at Hesus Mabuting Pastol Parish, 
+                    followed by an indoor reception at Abanillas Banquet and Events Hall. 
+                    Both venues provide a comfortable setting for our guests to enjoy the celebration.  
+
                 </p>
             </div>
 
@@ -1014,8 +1018,19 @@
 
             <div class="faq-answer">
                 <p>
-                    Semi-formal or cocktail attire is suggested. Please follow
-                    the wedding colors and avoid wearing white.
+                    <strong>Suggested Dress Code:</strong> Semi-Formal / Cocktail Attire
+                </p>
+                <p>
+                    <strong>For Gentlemen:</strong> Polo shirt, collared shirt, or polo paired with slacks or trousers in khaki, black, or other appropriate colors.
+                </p>
+                <p>
+                    <strong>For Ladies:</strong> Cocktail dress, dressy skirt and blouse, terno, slacks with a formal/semi-formal top, or a classy jumpsuit.
+                </p>
+                <p>
+                    As our wedding ceremony will be held in a church, we kindly ask our guests to wear modest and appropriate attire.
+                </p>
+                <p>
+                    Thank you for helping us make our celebration even more special.
                 </p>
             </div>
 
@@ -1059,14 +1074,17 @@
 
             <div class="faq-answer">
                 <p>
-                    Yes, you may post photos from the reception. For the church ceremony, 
-                    please keep the moment solemn and avoid posting photos that block the 
-                    aisle or cause inconvenience to other guests. We encourage you to focus 
-                    on capturing beautiful, respectful moments.
+                    Yes, you may post and share your photos after the event. 
+                    During the church ceremony, we kindly ask you to keep the moment solemn, 
+                    be present, and feel the beauty of the occasion. Please avoid taking photos 
+                    in a way that may block the aisle or cause inconvenience to the couple, 
+                    the ceremony, or other guests.
                 </p>
                 <p style="margin-top: 12px;">
-                    For a curated collection of all guest photos, please share your best 
-                    moments in our Google Drive newlywed album using the QR code above.
+                    At the reception venue, a QR code will be available for you to upload your 
+                    favorite photos and videos from the celebration. We would love to see the day 
+                    from your perspective and create a collection of beautiful memories captured by 
+                    everyone who celebrated with us.
                 </p>
             </div>
 
@@ -1114,7 +1132,7 @@
         <p class="rsvp-text">
 
             Kindly let us know if you'll be joining us
-            on our special day. For RSVP concerns, please contact Rowell or Teresa.
+            on our special day. For RSVP concerns, please contact Rowell at 09217548574 or Teresa at 09155064782.
 
         </p>
 
