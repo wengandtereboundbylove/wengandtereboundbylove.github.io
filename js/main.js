@@ -240,6 +240,30 @@ storyPhotoButtons.forEach(button => {
 
 });
 
+/* Venue card scroll-to-map behavior */
+
+document.querySelectorAll(".quick-detail[data-scroll-target]")
+    .forEach(card => {
+
+        card.addEventListener("click", event => {
+
+            const targetId = card.dataset.scrollTarget;
+            const target = document.querySelector(targetId);
+
+            if (!target) return;
+
+            const offset = 80;
+            const position = target.offsetTop - offset;
+
+            window.scrollTo({
+                top: position,
+                behavior: "smooth"
+            });
+
+        });
+
+    });
+
 qrCodeButtons.forEach(button => {
 
     button.addEventListener("click", () => {
