@@ -527,6 +527,16 @@ section h2 {
     text-align: center;
 }
 
+.quick-detail[data-scroll-target] {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quick-detail[data-scroll-target]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
 .quick-detail span,
 .map-note span,
 .memory-note span {
@@ -712,7 +722,38 @@ section h2 {
 .detail-card {
     width: 100%;
     margin: 0;
-    padding-top: 18px;
+    padding: 0 0 18px;
+}
+
+.detail-card > .label {
+    margin-top: 18px;
+}
+
+.story-photo.venue-photo {
+    width: calc(100% - 24px);
+    margin: 0 auto 0;
+    padding: 12px 12px 0;
+    border: none;
+    box-shadow: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.story-photo.venue-photo img {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+    margin: 0;
+}
+
+.quick-detail[data-scroll-target] {
+    cursor: pointer;
+}
+
+.quick-detail[data-scroll-target]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.1);
 }
 
 .detail-image {
@@ -720,8 +761,8 @@ section h2 {
     max-height: 220px;
     object-fit: cover;
     border-radius: 16px;
-    margin-bottom: 24px;
-    border: 1px solid rgba(219, 181, 181, 0.24);
+    margin-bottom: 0;
+    border: none;
 }
 
 .label,
@@ -1114,7 +1155,13 @@ section h2 {
     margin-bottom: 12px;
 }
 
+.dark-section#attire .attire-content .attire-text strong {
+    font-weight: 700;
+}
+
 .dark-section#attire .attire-heading {
+    font-size: 1.02rem;
+    line-height: 1.7;
     font-weight: 600;
     margin-bottom: 14px;
 }
@@ -1365,8 +1412,13 @@ section h2 {
 .faq-answer p {
     color: var(--text-dark);
     font-size: 1rem;
-    line-height: 1.6;
-    margin: 12px 0;
+    line-height: 1.7;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.faq-answer p strong {
+    font-weight: 700;
 }
 
 @keyframes slideDown {
