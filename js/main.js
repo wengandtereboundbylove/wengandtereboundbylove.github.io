@@ -683,6 +683,34 @@ document.querySelectorAll(".navbar nav a")
 
 
 /* ==========================================
+   OPENING INVITATION COVER
+========================================== */
+
+const invitationCover = document.getElementById("invitationCover");
+const openInvitation = document.getElementById("openInvitation");
+
+function revealInvitation() {
+
+    if (!invitationCover) return;
+
+    invitationCover.classList.add("is-opening");
+
+    window.setTimeout(() => {
+
+        invitationCover.setAttribute("aria-hidden", "true");
+
+    }, 600);
+
+}
+
+if (openInvitation) {
+
+    openInvitation.addEventListener("click", revealInvitation);
+
+}
+
+
+/* ==========================================
    DEBUG
 ========================================== */
 
