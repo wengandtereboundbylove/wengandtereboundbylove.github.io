@@ -988,6 +988,24 @@ section h2 {
     gap: 24px;
 }
 
+.legacy-entourage-details {
+    display: none;
+}
+
+.entourage-intro {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: -8px 0 20px;
+}
+
+.entourage-little-ones {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
+}
+
 .sponsor-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(220px, 1fr));
@@ -1164,6 +1182,23 @@ section h2 {
     line-height: 1.7;
     font-weight: 600;
     margin-bottom: 14px;
+}
+
+.dark-section#attire .attire-subheading {
+    font-size: 1.12rem;
+    margin: 18px 0 8px;
+    font-weight: 700;
+}
+
+.dark-section#attire .attire-bullets {
+    list-style: disc;
+    padding-left: 1.6rem;
+    margin: 0 0 18px;
+}
+
+.dark-section#attire .attire-bullets li {
+    margin-bottom: 8px;
+    line-height: 1.6;
 }
 
 .dark-section#attire .color-palette {
@@ -2153,17 +2188,31 @@ section h2 { color: inherit !important; font-size: clamp(2.5rem, 7vw, 4.5rem); l
 }
 
 
-/* Requested dress-code palette */
+/* Invitation palette: neutral ivory paper, charcoal ink, and muted dress-code neutrals. */
 :root {
-    --cream: #F1E5D1;
-    --rose: #DBB5B5;
-    --blush: #C39898;
-    --mauve: #987070;
+    --cream: #EEEAE2;
+    --rose: #D5C8B8;
+    --blush: #B6A394;
+    --mauve: #88776D;
+    --bg: #C39898;
+    --bg-light: #987070;
+    --text-dark: #433F3C;
+}
+
+body {
+    background-color: var(--cream);
+    background-image: radial-gradient(rgba(67, 63, 60, .10) .6px, transparent .8px), radial-gradient(rgba(67, 63, 60, .05) .5px, transparent .7px);
+    background-position: 0 0, 5px 7px;
+    background-size: 13px 13px, 17px 17px;
+}
+
+.light-section {
+    background: var(--cream);
 }
 
 #entourage,
 #attire {
-    background: #F1E5D1;
+    background: var(--cream);
     color: #542333;
 }
 
@@ -2180,14 +2229,100 @@ section h2 { color: inherit !important; font-size: clamp(2.5rem, 7vw, 4.5rem); l
     color: #542333;
 }
 
+/* Compact, invitation-style hierarchy for the entourage details. */
+#entourage .section-subtitle {
+    font-family: var(--font-body);
+    font-size: clamp(1.15rem, 2.7vw, 1.55rem) !important;
+    font-weight: 800;
+    letter-spacing: 1.8px !important;
+    margin-bottom: 12px;
+}
+
+#entourage h2 {
+    font-size: clamp(2.15rem, 5.2vw, 3.45rem);
+    line-height: .96;
+    margin-bottom: 22px;
+}
+
+#entourage .section-divider { display: none; }
+
+#entourage .entourage-card {
+    background: rgba(255, 255, 255, .28) !important;
+    border: 2px solid #987070 !important;
+    max-width: 900px;
+    padding: 34px 28px;
+}
+
+#entourage .entourage-section {
+    border: 0;
+    margin: 0 0 40px;
+    padding: 0;
+}
+
+#entourage .entourage-label {
+    font-family: var(--font-body);
+    font-size: clamp(1.15rem, 2.8vw, 1.55rem) !important;
+    font-weight: 800;
+    letter-spacing: 1.35px !important;
+    line-height: 1.05;
+    margin: 0;
+    opacity: 1;
+}
+
+#entourage .entourage-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.05rem, 2.3vw, 1.35rem);
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0 0 18px;
+}
+
+#entourage .entourage-parent-bride { display: none; }
+
+#entourage .entourage-parents-grid,
+#entourage .entourage-parents-grid h3 {
+    color: #3f3a3a;
+}
+
+#entourage .entourage-parents-grid h3 {
+    font-size: clamp(1.28rem, 2.9vw, 1.78rem);
+    font-weight: 600;
+    line-height: 1.08;
+}
+
+#entourage .sponsor-grid { gap: 12px 24px; }
+
+#entourage .sponsor-pair {
+    background: rgba(255, 255, 255, .22) !important;
+    border: 1px solid #C39898 !important;
+    padding: 18px 14px;
+}
+
+#entourage .sponsor-pair h3,
+#entourage .entourage-little-ones h3 {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: clamp(1rem, 2.15vw, 1.28rem);
+    font-weight: 600;
+    line-height: 1.02;
+}
+
+#entourage .entourage-section > h3 {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+    font-weight: 700;
+    line-height: 1.06;
+}
+
+#entourage .entourage-little-ones { margin-bottom: 0; }
+
 #attire .memory-note {
     background: #987070 !important;
     border-color: #987070 !important;
-    color: #F1E5D1;
+    color: var(--cream);
 }
 
-#attire .memory-note span { color: #F1E5D1 !important; }
-#attire .memory-note::before { color: #F1E5D1; }
+#attire .memory-note span { color: var(--cream) !important; }
+#attire .memory-note::before { color: var(--cream); }
 
 /* Keep all Dress Code copy legible on the cream panel. */
 .dark-section#attire .attire-content {
@@ -2214,14 +2349,14 @@ section h2 { color: inherit !important; font-size: clamp(2.5rem, 7vw, 4.5rem); l
 #gifts .gift-card {
     background: rgba(84, 35, 51, .22) !important;
     border-color: #DBB5B5 !important;
-    color: #F1E5D1;
+    color: var(--cream);
 }
 
 #gifts .gift-card > p,
 #gifts .gift-options p,
 #gifts .gift-note,
 #gifts .gift-details-featured p {
-    color: #F1E5D1 !important;
+    color: var(--cream) !important;
     font-weight: 500;
 }
 
@@ -2243,7 +2378,7 @@ section h2 { color: inherit !important; font-size: clamp(2.5rem, 7vw, 4.5rem); l
 
 /* RSVP becomes a cream doodle invitation panel. */
 #rsvp {
-    background: #F1E5D1;
+    background: var(--cream);
     color: #542333;
     text-align: center;
 }
@@ -2275,7 +2410,7 @@ section h2 { color: inherit !important; font-size: clamp(2.5rem, 7vw, 4.5rem); l
     background: #70233A !important;
     border-color: #70233A !important;
     box-shadow: 4px 4px 0 #C39898 !important;
-    color: #F1E5D1 !important;
+    color: var(--cream) !important;
 }
 
 #rsvp .rsvp-button:hover {
@@ -2291,9 +2426,58 @@ section h2 { color: inherit !important; font-size: clamp(2.5rem, 7vw, 4.5rem); l
 
 /* Match the edited cover illustration's warm cream background. */
 .invitation-cover {
-    background: #F6E6D1;
+    background: var(--cream);
 }
 
 .cover-couple {
     mix-blend-mode: normal;
 }
+
+/* Remove remaining wine-red accents so the whole page follows the invitation paper palette. */
+#entourage,
+#attire,
+#rsvp {
+    color: var(--text-dark);
+}
+
+#entourage .section-subtitle,
+#entourage .entourage-label,
+#entourage h2,
+#attire .attire-label,
+#attire .attire-heading,
+#attire h2,
+#rsvp h2,
+#rsvp .deadline {
+    color: var(--bg) !important;
+}
+
+#entourage .entourage-card { border-color: var(--mauve) !important; }
+#entourage .sponsor-pair { border-color: var(--blush) !important; }
+
+#attire .memory-note,
+#rsvp .rsvp-button {
+    background: var(--bg) !important;
+    border-color: var(--bg) !important;
+}
+
+#rsvp .rsvp-button { box-shadow: 4px 4px 0 var(--blush) !important; }
+#rsvp .rsvp-button:hover { background: var(--mauve) !important; border-color: var(--mauve) !important; }
+
+#attire .attire-content { border-left-color: var(--blush) !important; }
+#attire .attire-content .attire-text,
+#attire .attire-content .attire-text strong,
+#rsvp .rsvp-text { color: var(--text-dark) !important; }
+
+#gifts .gift-card {
+    background: rgba(255, 255, 255, .10) !important;
+    border-color: var(--blush) !important;
+}
+
+#gifts .gift-options div,
+#gifts .gift-details-featured {
+    background: rgba(0, 0, 0, .18) !important;
+    border-color: var(--blush) !important;
+}
+
+#gifts .gift-options h3,
+#gifts .gift-details-featured h3 { color: var(--rose) !important; }
