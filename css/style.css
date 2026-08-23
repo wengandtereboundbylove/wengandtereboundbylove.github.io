@@ -323,7 +323,7 @@ section h2 {
 }
 
 .hero h1 {
-    font-family: var(--font-heading);
+    font-family: 'One Little Font', cursive;
     font-size: clamp(4.4rem, 12vw, 8rem);
     font-weight: 500;
     line-height: 0.95;
@@ -399,7 +399,7 @@ section h2 {
 
 .venue-label {
     display: block;
-    font-family: var(--font-body);
+    font-family: 'Corollo Playscript', cursive;
     font-size: 11px;
     font-style: normal;
     letter-spacing: 4px;
@@ -468,7 +468,7 @@ section h2 {
 .countdown span {
     display: block;
 
-    font-family: var(--font-heading);
+    font-family: 'Corolla Playscript', cursive !important;
     font-size: clamp(3rem, 7vw, 5rem);
 
     font-weight: 500;
@@ -497,7 +497,7 @@ section h2 {
 }
 
 .invitation-note p {
-    font-family: var(--font-heading);
+    font-family: 'Corolla Playscript', cursive !important;
     font-size: clamp(1.55rem, 4vw, 2.2rem);
     line-height: 1.45;
     color: var(--text-dark);
@@ -550,7 +550,7 @@ section h2 {
 
 .quick-detail strong {
     display: block;
-    font-family: var(--font-heading);
+    font-family: 'Corolla Playscript', cursive !important;
     font-size: 1.65rem;
     font-weight: 500;
     line-height: 1.15;
@@ -634,7 +634,7 @@ section h2 {
     width: min(100%, 720px);
     margin: 34px auto 0;
     text-align: center;
-    font-family: var(--font-heading);
+    font-family: 'Corolla Playscript', cursive !important;
     font-size: 1.35rem;
     color: rgba(59, 38, 52, 0.84);
     letter-spacing: 0.2px;
@@ -787,7 +787,7 @@ section h2 {
 .story-content h3,
 .timeline-item h4,
 .gift-options h3 {
-    font-family: var(--font-heading);
+    font-family: 'Corolla Playscript', cursive !important;
     font-size: 1.7rem;
     font-weight: 500;
     line-height: 1.2;
@@ -993,9 +993,9 @@ section h2 {
 }
 
 .entourage-intro {
-    font-family: var(--font-heading);
+    font-family: 'Corolla Playscript', cursive !important;
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 300;
     margin: -8px 0 20px;
 }
 
@@ -1351,7 +1351,7 @@ section h2 {
 }
 
 .playlist-item strong {
-    font-family: var(--font-heading);
+    font-family: 'Corolla Playscript', cursive !important;
     font-size: 1.1rem;
     font-weight: 500;
     min-width: 0;
@@ -1893,7 +1893,7 @@ section {
 .now-playing,
 .menu-btn {
     color: var(--bg) !important;
-    font-family: var(--font-heading);
+    font-family: 'Corolla Playscript', cursive !important;
     font-weight: 700;
 }
 
@@ -1935,11 +1935,7 @@ section {
 }
 
 .hero-content::before {
-    content: '💍';
-    display: block;
-    font-size: 42px;
-    margin: 0 auto 19px;
-    filter: grayscale(1) sepia(1) hue-rotate(310deg) saturate(3);
+    display: none;
 }
 
 .hero .subtitle,
@@ -1956,19 +1952,20 @@ section {
     letter-spacing: 2.4px !important;
 }
 
-.hero h1,
 section h2,
 .story-content h3,
 .detail-card h3,
 .entourage-card h3,
 .gift-card h3,
 .music-player h3 {
-    font-family: var(--font-heading) !important;
-    font-weight: 700;
+    font-family: 'One Little Font', cursive !important;
+    font-weight: 550;
     letter-spacing: 0 !important;
 }
 
 .hero h1 {
+    font-family: 'One Little Font', cursive !important;
+    font-weight: 700 !important;
     color: var(--bg) !important;
     font-size: clamp(4.1rem, 11vw, 7.5rem) !important;
     line-height: .88;
@@ -1979,7 +1976,7 @@ section h2,
 .divider, .section-divider { border-color: var(--bg) !important; }
 .divider::before, .divider::after, .section-divider::before, .section-divider::after { background: var(--bg) !important; }
 .date, .event-time, .venue { color: var(--text-dark) !important; }
-.venue { font-family: var(--font-heading); font-size: 1.32rem !important; line-height: 1.25; }
+.venue { font-family: 'Corolla Playscript', cursive !important; font-size: 1.32rem !important; line-height: 1.25; }
 
 .ceremony-tag {
     background: transparent !important;
@@ -2041,8 +2038,8 @@ section h2 { color: inherit !important; font-size: clamp(2.5rem, 7vw, 4.5rem); l
 .detail-card:hover { transform: translateY(-4px) rotate(-.6deg); box-shadow: 5px 5px 0 rgba(120,12,37,.22) !important; }
 
 .attire-top .color-palette div { border: 2px solid var(--cream); border-radius: 50% 45% 53% 42%; }
-.memory-note span { color: var(--cream) !important; font-family: var(--font-heading); font-size: 1.8rem; }
-.memory-note::before { content: '📵  NO PHONES PLEASE ♥'; display: block; font-family: var(--font-heading); font-size: 1.55rem; line-height: 1.1; margin-bottom: 12px; }
+.memory-note span { color: var(--cream) !important; font-family: 'Corolla Playscript', cursive !important; font-size: 1.8rem; }
+.memory-note::before { content: '📵  NO PHONES PLEASE ♥'; display: block; font-family: 'Corolla Playscript', cursive !important; font-size: 1.55rem; line-height: 1.1; margin-bottom: 12px; }
 
 .section-doodle {
     display: block;
@@ -2130,8 +2127,8 @@ section h2 { color: inherit !important; font-size: clamp(2.5rem, 7vw, 4.5rem); l
 }
 
 .cover-content { max-width: 420px; position: relative; width: min(100%, 420px); z-index: 1; }
-.cover-kicker { font-family: var(--font-heading); font-size: 1.7rem; font-weight: 700; margin-bottom: 0; transform: rotate(-5deg); }
-.cover-message { font-family: var(--font-heading); font-size: clamp(1.55rem, 6.5vw, 2.3rem); font-weight: 700; line-height: 1.05; margin: 0 auto; transform: rotate(-2deg); }
+.cover-kicker { font-family: 'One Little Font', cursive; font-size: 1.7rem; font-weight: 700; margin-bottom: 0; transform: rotate(-5deg); }
+.cover-message { font-family: 'One Little Font', cursive; font-size: clamp(1.55rem, 6.5vw, 2.3rem); font-weight: 700; line-height: 1.05; margin: 0 auto; transform: rotate(-2deg); }
 
 .cover-couple {
     animation: couple-float 3.6s ease-in-out infinite;
@@ -2150,7 +2147,7 @@ section h2 { color: inherit !important; font-size: clamp(2.5rem, 7vw, 4.5rem); l
     box-shadow: 3px 4px 0 var(--bg);
     color: var(--cream);
     cursor: pointer;
-    font-family: var(--font-heading);
+    font-family: 'Carollo Playscript', cursive;
     font-size: 1.16rem;
     font-weight: 700;
     letter-spacing: .6px;
@@ -2270,9 +2267,9 @@ body {
 }
 
 #entourage .entourage-intro {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Corolla Playscript', cursive !important;
     font-size: clamp(1.05rem, 2.3vw, 1.35rem);
-    font-weight: 600;
+    font-weight: 300;
     line-height: 1.1;
     margin: 0 0 18px;
 }
@@ -2285,8 +2282,9 @@ body {
 }
 
 #entourage .entourage-parents-grid h3 {
+    font-family: 'Corolla Playscript', cursive !important;
     font-size: clamp(1.28rem, 2.9vw, 1.78rem);
-    font-weight: 600;
+    font-weight: 300;
     line-height: 1.08;
 }
 
@@ -2300,16 +2298,16 @@ body {
 
 #entourage .sponsor-pair h3,
 #entourage .entourage-little-ones h3 {
-    font-family: 'Cormorant Garamond', serif !important;
+    font-family: 'Corolla Playscript', cursive !important;
     font-size: clamp(1rem, 2.15vw, 1.28rem);
-    font-weight: 600;
+    font-weight: 200;
     line-height: 1.02;
 }
 
 #entourage .entourage-section > h3 {
-    font-family: 'Cormorant Garamond', serif !important;
+    font-family: 'Corolla Playscript', cursive !important;
     font-size: clamp(1.35rem, 3vw, 1.8rem);
-    font-weight: 700;
+    font-weight: 200;
     line-height: 1.06;
 }
 
