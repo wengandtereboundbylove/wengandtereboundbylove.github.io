@@ -4,6 +4,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap');
 
+@font-face {
+    font-family: 'One Little Font';
+    src: url('../assets/fonts/One-Little-Font.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 /* ==========================================
    ROOT VARIABLES
