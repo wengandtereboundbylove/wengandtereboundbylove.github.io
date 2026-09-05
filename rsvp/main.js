@@ -1,12 +1,21 @@
 const googleForm = {
-    actionUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeM6R3W24TEwjdLMjU9fljzrEc6QguQ5oR0xXd6-I7ILVV_Ag/formResponse",
+    actionUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfKDRx99Xwhn4FosHHRSjfZGi0Kv2xRXAj3xJlzqbN0497Ilw/formResponse",
     entries: {
-        guestName: "entry.375581519",
-        attendance: "entry.1158118741",
-        guestCount: "entry.1888502228",
-        songRequest: "entry.1472571667",
-        message: "entry.1917949991"
+        guestName: "entry.1499645551",
+        attendance: "entry.1895166149",
+        plusOne: "entry.848753092",
+        plusOneName: "entry.2021388576"
     }
+};
+
+/*
+   Add your invited guests here when your master list is ready.
+   Use a lowercase version of each name as the key. A guest without an entry
+    is safely assigned one seat by default.
+*/
+const guestInvitations = {
+     // "juan dela cruz": { seats: 1 },
+     // "maria santos": { seats: 2 }
 };
 
 const rsvpForm =
@@ -18,11 +27,90 @@ const successCard =
 const formStatus =
     document.getElementById("formStatus");
 
+const attendingConfirmation =
+    document.getElementById("attendingConfirmation");
+
+const decliningConfirmation =
+    document.getElementById("decliningConfirmation");
+
+const attendanceDetails =
+    document.getElementById("attendanceDetails");
+
+const declineMessage =
+    document.getElementById("declineMessage");
+
+const plusOneSection =
+    document.getElementById("plusOneSection");
+
+const plusOneDetails =
+    document.getElementById("plusOneDetails");
+
+const guestNameInput =
+    document.getElementById("guestName");
+
+function normalizeGuestName(name) {
+
+    return name.trim().toLowerCase().replace(/\s+/g, " ");
+}
+
+function getGuestInvitation() {
+
+    const guestName = normalizeGuestName(guestNameInput?.value || "");
+
+    return guestInvitations[guestName] || {
+        seats: 1
+    };
+}
+
+function updateInvitationDetails() {
+
+    const invitation = getGuestInvitation();
+    const name = guestNameInput?.value.trim() || "Your name";
+    const reservedGuestName = document.getElementById("reservedGuestName");
+    const reservedSeats = document.getElementById("reservedSeats");
+
+    if (reservedGuestName) reservedGuestName.textContent = name;
+
+    if (reservedSeats) {
+        reservedSeats.textContent = invitation.seats === 1
+            ? "We have reserved 1 seat for you."
+            : `We have reserved ${invitation.seats} seats for you.`;
+    }
+
+    if (plusOneSection) plusOneSection.hidden = false;
+
+    togglePlusOneDetails();
+}
+
+function togglePlusOneDetails() {
+
+    const hasPlusOne = document.querySelector('input[name="plusOne"]:checked')?.value === "Yes";
+    const plusOneName = document.getElementById("plusOneName");
+
+    if (plusOneDetails) plusOneDetails.hidden = !hasPlusOne;
+    if (plusOneName) plusOneName.required = hasPlusOne;
+}
+
+function updateAttendanceFields() {
+
+    const isAttending = getSelectedAttendance() === "Yes";
+
+    if (attendanceDetails) attendanceDetails.hidden = !isAttending;
+    if (declineMessage) declineMessage.hidden = getSelectedAttendance() !== "No";
+
+    if (isAttending) {
+        updateInvitationDetails();
+    } else {
+        const plusOneName = document.getElementById("plusOneName");
+        if (plusOneName) plusOneName.required = false;
+    }
+}
+
 function isGoogleFormConfigured() {
 
     return googleForm.actionUrl.includes("formResponse") &&
         Object.values(googleForm.entries).every(entry =>
-            !entry.includes("REPLACE")
+            !entry || !entry.includes("REPLACE")
         );
 }
 
@@ -44,22 +132,38 @@ function getSelectedAttendance() {
 
 function getRsvpValues() {
 
-    return {
+    const isAttending = getSelectedAttendance() === "Yes";
+    const values = {
         [googleForm.entries.guestName]:
             document.getElementById("guestName").value.trim(),
         [googleForm.entries.attendance]:
             getSelectedAttendance(),
-        [googleForm.entries.guestCount]:
-            document.getElementById("guestCount").value,
-        [googleForm.entries.songRequest]:
-            document.getElementById("songRequest").value.trim(),
-        [googleForm.entries.message]:
-            document.getElementById("message").value.trim()
+        [googleForm.entries.plusOne]:
+            isAttending
+                ? document.querySelector('input[name="plusOne"]:checked')?.value || "No"
+                : ""
     };
+
+    if (isAttending) {
+        const optionalFields = {
+            plusOneName: document.getElementById("plusOneName").value.trim()
+        };
+
+        Object.entries(optionalFields).forEach(([field, value]) => {
+            if (googleForm.entries[field]) values[googleForm.entries[field]] = value;
+        });
+    }
+
+    return values;
 }
 
 function showSuccess() {
 
+    const isAttending = getSelectedAttendance() === "Yes";
+
+    if (attendingConfirmation) attendingConfirmation.hidden = !isAttending;
+    if (decliningConfirmation) decliningConfirmation.hidden = isAttending;
+    document.body.classList.add("success-state");
     rsvpForm.closest(".rsvp-card").hidden = true;
     successCard.hidden = false;
     successCard.scrollIntoView({ behavior: "smooth" });
@@ -131,6 +235,20 @@ function submitToGoogleForm(values) {
 }
 
 if (rsvpForm && successCard) {
+
+    rsvpForm.querySelectorAll("input[name='attendance']")
+        .forEach(input => input.addEventListener("change", updateAttendanceFields));
+
+    rsvpForm.querySelectorAll("input[name='plusOne']")
+        .forEach(input => input.addEventListener("change", togglePlusOneDetails));
+
+    if (guestNameInput) {
+        guestNameInput.addEventListener("input", () => {
+            if (getSelectedAttendance() === "Yes") updateInvitationDetails();
+        });
+    }
+
+    updateAttendanceFields();
 
     rsvpForm.addEventListener("submit", async event => {
 
