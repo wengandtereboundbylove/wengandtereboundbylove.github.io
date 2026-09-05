@@ -76,8 +76,9 @@
             <a href="#entourage">Entourage</a>
             <a href="#attire">Attire</a>
             <a href="#gifts">Gifts</a>
-            <a href="#music">Music</a>
+            <a href="#photos">Photos</a>
             <a href="#faq">FAQ</a>
+            <a href="#music">Music</a>
             <a href="#rsvp">RSVP</a>
         </nav>
 
@@ -130,7 +131,7 @@
     <!-- COUNTDOWN -->
     <section class="countdown-section" id="countdown">
 
-        <p class="small-heading">
+        <p class="small-heading" id="countdownHeading">
             COUNTING DOWN TO FOREVER
         </p>
 
@@ -292,6 +293,24 @@
 
             </div>
 
+            <div class="story-item story-item-final">
+
+                <div class="story-date">
+                    MARCH 20, 2027
+                </div>
+
+                <div class="story-content">
+                    <h3>
+                        "Forever Begins"
+                    </h3>
+
+                    <p>
+                        After seven years of choosing each other, we finally say, "I do."
+                    </p>
+                </div>
+
+            </div>
+
         </div>
 
         <p class="story-footnote">
@@ -421,6 +440,13 @@
             </div>
         </div>
 
+        <aside class="details-rsvp-cta" aria-labelledby="details-rsvp-heading">
+            <p class="section-subtitle">ARE YOU JOINING US?</p>
+            <h3 id="details-rsvp-heading">We would be honored to celebrate this special day with you.</h3>
+            <p class="details-rsvp-deadline">Please confirm your attendance by December 18, 2026.</p>
+            <a href="#rsvp" class="rsvp-button">RSVP NOW</a>
+        </aside>
+
     </section>
 
     <!-- MAP -->
@@ -482,11 +508,11 @@
     <section class="light-section" id="program">
 
         <p class="section-subtitle">
-            THE DAY
+            THE WEDDING DAY
         </p>
 
         <h2>
-            Wedding Program
+            Wedding Day Timeline
         </h2>
 
         <div class="section-divider"></div>
@@ -494,45 +520,116 @@
         <div class="timeline">
 
             <div class="timeline-item">
-                <span>01</span>
+                <time datetime="09:30">9:30 AM</time>
                 <div>
                     <h4>Guest Arrival</h4>
-                    <p>A quiet time to gather and settle in.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <span>02</span>
+                <time datetime="10:00">10:00 AM</time>
                 <div>
-                    <h4>Simple Ceremony</h4>
-                    <p>An intimate blessing with our closest loved ones.</p>
+                    <h4>Wedding Ceremony</h4>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <span>03</span>
+                <time datetime="11:15">11:15 AM</time>
                 <div>
-                    <h4>Exchange of Vows</h4>
-                    <p>Just the promises, the rings, and the moment.</p>
+                    <h4>Family &amp; Wedding Party Photos</h4>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <span>04</span>
+                <time datetime="11:30">11:30 AM</time>
                 <div>
-                    <h4>Photos Together</h4>
-                    <p>A few simple portraits with family and friends.</p>
+                    <h4>Travel to Reception</h4>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <span>05</span>
+                <time datetime="12:00">12:00 PM</time>
                 <div>
-                    <h4>Shared Meal</h4>
-                    <p>A relaxed meal and conversation after the ceremony.</p>
+                    <h4>Lunch Reception</h4>
                 </div>
             </div>
 
+            <div class="timeline-item">
+                <time datetime="12:30">12:30 PM</time>
+                <div>
+                    <h4>Wedding Program</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <time datetime="13:30">1:30 PM</time>
+                <div>
+                    <h4>Photo &amp; Fellowship</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <time datetime="14:30">2:30 PM</time>
+                <div>
+                    <h4>End of Celebration</h4>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GUEST REQUESTS -->
+    <section class="dark-section requests-section" id="requests">
+
+        <p class="section-subtitle">
+            A FEW LITTLE REQUESTS
+        </p>
+
+        <h2>
+            What We Ask From You
+        </h2>
+
+        <div class="requests-list">
+            <article class="request-item">
+                <span class="request-icon" aria-hidden="true">🤍</span>
+                <div>
+                    <h3>Be present</h3>
+                    <p>Please keep phones on silent during the ceremony and be mindful not to block anyone's view.</p>
+                </div>
+            </article>
+
+            <article class="request-item">
+                <span class="request-icon" aria-hidden="true">📸</span>
+                <div>
+                    <h3>Capture the joy</h3>
+                    <p>Photos and videos are welcome at the church and reception—just be mindful of the couple, the ceremony, and other guests.</p>
+                </div>
+            </article>
+
+            <article class="request-item">
+                <span class="request-icon" aria-hidden="true">👗</span>
+                <div>
+                    <h3>Dress respectfully</h3>
+                    <p>Please observe the semi-formal/cocktail dress code and appropriate church attire.</p>
+                </div>
+            </article>
+
+            <article class="request-item">
+                <span class="request-icon" aria-hidden="true">⏰</span>
+                <div>
+                    <h3>Arrive early</h3>
+                    <p>Please arrive by <strong>9:30 AM</strong> so everyone is seated before the ceremony begins.</p>
+                </div>
+            </article>
+
+            <article class="request-item">
+                <span class="request-icon" aria-hidden="true">❤️</span>
+                <div>
+                    <h3>Celebrate with us</h3>
+                    <p>Come hungry, come happy, and enjoy the day with us!</p>
+                </div>
+            </article>
         </div>
 
     </section>
@@ -562,8 +659,14 @@
                 <p class="entourage-intro">Our beloved parents</p>
 
                 <div class="sponsor-grid entourage-parents-grid">
-                    <div class="sponsor-pair"><h3>Mr. Rodrigo C. Pascua<br>Mrs. Delma E. Pascua</h3></div>
-                    <div class="sponsor-pair"><h3>Mr. Reynald T. Madriaga<br>Mrs. Emily D. Madriaga</h3></div>
+                    <div class="sponsor-pair">
+                        <h3>Mr. Rodrigo C. Pascua<br>Mrs. Delma E. Pascua</h3>
+                        <span>Parents of the Groom</span>
+                    </div>
+                    <div class="sponsor-pair">
+                        <h3>Mr. Reynald T. Madriaga<br>Mrs. Emily D. Madriaga</h3>
+                        <span>Parents of the Bride</span>
+                    </div>
                 </div>
 
             </div>
@@ -657,11 +760,15 @@
     <section class="dark-section" id="attire">
 
         <h2>
-            Wedding Attire Guide
+            Dress Code
         </h2>
 
         <p class="attire-text attire-label">
-            cream · blush · dusty rose · mauve
+            Suggested Colors
+        </p>
+
+        <p class="attire-color-names">
+            Cream <span aria-hidden="true">·</span> Blush <span aria-hidden="true">·</span> Dusty Rose <span aria-hidden="true">·</span> Mauve
         </p>
 
         <div class="section-divider"></div>
@@ -682,7 +789,7 @@
 
         <div class="attire-content">
             <p class="attire-text attire-heading">
-                <strong>Suggested dress code — Semi-formal / Cocktail</strong>
+                <strong>Semi-Formal / Cocktail</strong>
             </p>
 
             <p class="attire-text attire-subheading">
@@ -694,20 +801,18 @@
                 <li><strong>Ladies:</strong> Filipiniana attire</li>
             </ul>
 
-            <p class="attire-text">
-                <strong>Male Guests:</strong> — Polo shirt, collared shirt, or polo paired with slacks or trousers in khaki, black, or other appropriate colors. 
+            <p class="attire-text attire-guest-type">
+                <strong>Ladies</strong><br>
+                Cocktail dress, dressy skirt and blouse, Filipiniana, terno, or elegant jumpsuit.
+            </p>
+
+            <p class="attire-text attire-guest-type">
+                <strong>Gentlemen</strong><br>
+                Barong Tagalog, polo, or collared shirt with slacks or trousers in khaki, black, or other appropriate colors.
             </p>
 
             <p class="attire-text">
-                <strong>Female Guests:</strong> — Cocktail dress, dressy skirt and blouse, terno, slacks with a formal/semi-formal top, or a classy jumpsuit.
-            </p>
-
-            <p class="attire-text">
-                As our wedding ceremony will be held in a church, we kindly ask our guests to wear modest and appropriate attire.
-            </p>
-
-            <p class="attire-text">
-                Thank you for helping us make our celebration even more special.
+                As our ceremony will be held in a church, we kindly ask everyone to dress modestly and respectfully.
             </p>
 
         </div>
@@ -715,9 +820,7 @@
         <div class="memory-note">
             <span>Gentle Reminder</span>
             <p>
-                We would love everyone to be fully present during the ceremony.
-                Kindly keep phones silent during the church ceremony and save
-                photos for the reception and family moments.
+                Photos are welcome during the church ceremony and reception. Please keep phones silent, avoid blocking anyone's view, and let our designated photographer capture the big moments.
             </p>
         </div>
 
@@ -736,68 +839,18 @@
 
         <div class="gift-card">
 
-            <p>
-                Your presence, prayers, and well wishes are more than enough
-                and will always be deeply appreciated.
+            <p class="gift-intro">
+                Your presence, prayers, and love are already more than enough for us.
             </p>
 
-            <div class="gift-options">
-
-                <div>
-                    <h3>
-                        Monetary Gifts
-                    </h3>
-
-                    <p>
-                        If you wish to give a gift, a monetary gift would be
-                        sincerely appreciated as we begin our new life together.
-                    </p>
-                </div>
-
-                <div>
-                    <h3>
-                        Prayers & Wishes
-                    </h3>
-
-                    <p>
-                        Your prayers, kind words, and blessings mean so much
-                        to us on this special day.
-                    </p>
-                </div>
-
-                <div>
-                    <h3>
-                        Warmest Blessings
-                    </h3>
-
-                    <p>
-                        Your heartfelt blessings and kind thoughts mean so much to 
-                        us as we begin this new chapter together. Thank you for sharing 
-                        in the joy of our special day.
-                    </p>
-                </div>
-
-                <div>
-                    <h3>
-                        With Love
-                    </h3>
-
-                    <p>
-                        Please know that being with us on our special day is
-                        the greatest gift we could ask for.
-                    </p>
-                </div>
-
-            </div>
+            <p class="gift-intro">
+                If you wish to give a gift, a monetary gift would be sincerely appreciated as we begin this new chapter together.
+            </p>
 
             <div class="gift-details-featured">
                 <h3>
-                    Send Your Gift
+                    Digital Gift
                 </h3>
-
-                <p style="margin-bottom: 28px;">
-                    For digital gifts, scan below:
-                </p>
 
                 <div class="qr-codes-container">
                     <div class="qr-code-item">
@@ -824,8 +877,7 @@
             </div>
 
             <p class="gift-note">
-                For guests who may not have access to online banking, your monetary 
-                gift may be personally entrusted to the couple during the reception.
+                For guests who prefer to give personally, monetary gifts may also be entrusted to us during the reception.
             </p>
 
         </div>
@@ -1036,6 +1088,54 @@
 
     </section>
 
+    <!-- GUEST PHOTOS -->
+    <section class="dark-section photos-section" id="photos">
+
+        <p class="section-subtitle">
+            SHARE THE LOVE
+        </p>
+
+        <h2>
+            Your Photos, Our Memories
+        </h2>
+
+        <div class="photos-card">
+            <p>
+                Our designated photographer will capture the big moments, but we also want to see the little moments you experience with us.
+            </p>
+
+            <p class="photos-question">
+                Did you take a photo or video during our wedding?
+            </p>
+
+            <p>
+                Scan the QR code and add it to our shared wedding album.
+            </p>
+
+            <button
+                class="qr-code-button photos-qr-button"
+                type="button"
+                data-full="assets/wedding-photos.png"
+                data-caption="Shared Wedding Album QR Code"
+                aria-label="Open the shared wedding album QR code">
+                <img src="assets/wedding-photos.png" alt="QR code for our shared wedding album" class="photos-qr">
+            </button>
+
+            <a
+                class="photos-album-link"
+                href="https://photos.google.com/share/AF1QipO7aCQepxUdMn6xpsqvV2h7i7Nrti6wiseHFHBivShOehNTNbulWGLdW7MPPJEC7g?pli=1&amp;key=c2ZmbDBnSktKU250Mkc1aUNseE1RbThZZldVcEV3"
+                target="_blank"
+                rel="noopener noreferrer">
+                Open shared wedding album <span aria-hidden="true">↗</span>
+            </a>
+
+            <p class="photos-signoff">
+                Every photo tells another part of our story. <span aria-hidden="true">❤️</span>
+            </p>
+        </div>
+
+    </section>
+
     <!-- FAQ -->
     <section class="light-section" id="faq">
 
@@ -1069,7 +1169,7 @@
 
             <div class="faq-answer">
                 <p>
-                    We would love to celebrate with you. Please confirm your attendance through the RSVP form. Additional guests require prior approval, so kindly mention this when you RSVP.
+                    We kindly ask that guests attend according to the invitation addressed to them. If you would like to bring an additional guest, please let us know through the RSVP form so we can check if we can accommodate them.
                 </p>
             </div>
 
@@ -1141,24 +1241,8 @@
 
             <div class="faq-answer">
                 <p>
-                    Yes, photos are welcome during both the church ceremony and reception. 
-                    During the church ceremony, please avoid blocking the aisle and keep the 
-                    moment solemn and reverent. We welcome photos that capture the beauty of 
-                    the moment without causing inconvenience to others.
+                    Yes, photos and videos are welcome during both the church ceremony and reception. Please keep phones silent during the ceremony, avoid blocking the aisle or anyone's view, and be mindful of the couple and other guests. Our designated photographer will be capturing every big moment.
                 </p>
-                <p style="margin-top: 12px;">
-                    We invite you to share your photos in our newlywed album via Google Photos. 
-                    Scan the QR code below:
-                </p>
-                <div class="photo-qr-container">
-                    <button
-                        class="qr-code-button"
-                        type="button"
-                        data-full="assets/wedding-photos.png"
-                        data-caption="Google Drive Photos QR Code">
-                        <img src="assets/wedding-photos.png" alt="Google Drive Photos QR Code" class="photo-qr">
-                    </button>
-                </div>
             </div>
 
         </div>
@@ -1171,11 +1255,7 @@
 
             <div class="faq-answer">
                 <p>
-                    Yes, you may post and share your photos after the event. 
-                    During the church ceremony, we kindly ask you to keep the moment solemn, 
-                    be present, and feel the beauty of the occasion. Please avoid taking photos 
-                    in a way that may block the aisle or cause inconvenience to the couple, 
-                    the ceremony, or other guests.
+                    Yes, you may post and share your photos after the event. Photos and videos are welcome throughout the day; during the church ceremony, please keep the moment solemn and avoid blocking the aisle, the couple, or other guests.
                 </p>
                 <p style="margin-top: 12px;">
                     At the reception venue, a QR code will be available for you to upload your 
