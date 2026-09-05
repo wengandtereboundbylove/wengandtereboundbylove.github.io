@@ -2,21 +2,31 @@
    COUNTDOWN TIMER
 ========================================== */
 
-const weddingDate = new Date("2027-03-20T15:00:00").getTime();
+const weddingDate = new Date("2027-03-20T10:00:00").getTime();
 
 function updateCountdown() {
 
     const now = new Date().getTime();
     const difference = weddingDate - now;
+    const countdown = document.querySelector(".countdown");
+    const countdownHeading = document.getElementById("countdownHeading");
 
     if (difference <= 0) {
 
-        document.getElementById("days").textContent = "00";
-        document.getElementById("hours").textContent = "00";
-        document.getElementById("minutes").textContent = "00";
-        document.getElementById("seconds").textContent = "00";
+        if (countdownHeading) {
+            countdownHeading.textContent = "CELEBRATING OUR FOREVER";
+        }
 
-        return;
+        if (countdown) {
+            countdown.classList.add("countdown-complete");
+            countdown.innerHTML = `
+                <p class="countdown-celebration" role="status">
+                    TODAY'S THE DAY! <span aria-hidden="true">❤️</span>
+                </p>
+            `;
+        }
+
+        return false;
     }
 
     const days = Math.floor(
@@ -49,11 +59,17 @@ function updateCountdown() {
 
     document.getElementById("seconds").textContent =
         String(seconds).padStart(2, "0");
+
+    return true;
 }
 
-updateCountdown();
-
-setInterval(updateCountdown, 1000);
+if (updateCountdown()) {
+    const countdownTimer = setInterval(() => {
+        if (!updateCountdown()) {
+            clearInterval(countdownTimer);
+        }
+    }, 1000);
+}
 
 
 /* ==========================================
@@ -709,6 +725,13 @@ if (openInvitation) {
 
 }
 
+/* Keep the optional playlist near the end, after the wedding essentials. */
+const musicSection = document.getElementById("music");
+const rsvpSection = document.getElementById("rsvp");
+
+if (musicSection && rsvpSection && musicSection.parentElement === rsvpSection.parentElement) {
+    rsvpSection.parentElement.insertBefore(musicSection, rsvpSection);
+}
 
 /* ==========================================
    DEBUG
