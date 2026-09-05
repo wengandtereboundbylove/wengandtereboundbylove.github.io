@@ -19,9 +19,16 @@
 
         <div class="divider"></div>
 
-        <p class="description">
-            Kindly let us know if you'll be joining us on our special day.
-        </p>
+        <div class="description">
+            <p>
+                Your presence would mean so much to us as we begin this beautiful new chapter together.
+            </p>
+            <p>
+                Please take a moment to confirm your attendance and provide the details below. Your response will help us prepare the seats, meals, and other arrangements especially for you.
+            </p>
+            <p class="rsvp-deadline">Kindly RSVP by December 18, 2026.</p>
+            <p class="rsvp-signoff">We hope to celebrate with you! <span aria-hidden="true">🤍</span></p>
+        </div>
     </header>
 
     <main class="rsvp-container">
@@ -30,45 +37,67 @@
 
             <form id="rsvpForm">
                 <div class="form-group">
-                    <label for="guestName">Guest Name</label>
-                    <input type="text" id="guestName" placeholder="Enter your full name" required>
+                    <label for="guestName">Full Name</label>
+                    <p class="field-help">Please enter the name exactly as it appears on your invitation.</p>
+                    <input type="text" id="guestName" placeholder="Enter your full name" autocomplete="name" required>
                 </div>
 
                 <div class="form-group">
-                    <span class="group-label">Will you attend?</span>
+                    <span class="group-label">Will You Be Joining Us?</span>
 
                     <div class="attendance-options">
                         <label class="option-card">
                             <input type="radio" name="attendance" value="Yes" required>
-                            <span>Joyfully Accepts</span>
+                            <span>Yes, I'll be there! 🤍</span>
                         </label>
 
                         <label class="option-card">
                             <input type="radio" name="attendance" value="No">
-                            <span>Regretfully Declines</span>
+                            <span>Sorry, I won't be able to attend.</span>
                         </label>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="guestCount">Number of Guests</label>
-                    <select id="guestCount">
-                        <option value="1">1 Guest</option>
-                        <option value="2">2 Guests</option>
-                        <option value="3">3 Guests</option>
-                        <option value="4">4 Guests</option>
-                    </select>
+                <p class="decline-message" id="declineMessage" hidden>
+                    We're sorry we won't get to celebrate with you, but thank you for letting us know. You will be missed! 🤍
+                </p>
+
+                <div id="attendanceDetails" hidden>
+                    <section class="invitation-details" aria-labelledby="invitationHeading">
+                        <p class="group-label" id="invitationHeading">Your Invitation</p>
+                        <p>Your invitation has been reserved for:</p>
+                        <p class="reserved-name" id="reservedGuestName">Your name</p>
+                        <p class="reserved-seats" id="reservedSeats">We have reserved 1 seat for you.</p>
+                    </section>
+
+                    <section class="plus-one-section" id="plusOneSection" hidden aria-labelledby="plusOneHeading">
+                        <p class="group-label" id="plusOneHeading">Plus-One Details</p>
+                        <p class="field-help">Please tell us whether you will be bringing a guest.</p>
+                        <div class="attendance-options plus-one-options">
+                            <label class="option-card">
+                                <input type="radio" name="plusOne" value="No" checked required>
+                                <span>No, I will be attending alone.</span>
+                            </label>
+                            <label class="option-card" id="plusOneYesOption">
+                                <input type="radio" name="plusOne" value="Yes">
+                                <span>Yes, I have a plus-one.</span>
+                            </label>
+                        </div>
+
+                        <div class="plus-one-details" id="plusOneDetails" hidden>
+                            <div class="form-group">
+                                <label for="plusOneName">Full Name of Your Plus-One</label>
+                                <input type="text" id="plusOneName" placeholder="Enter their full name" autocomplete="name" required>
+                            </div>
+                        </div>
+                    </section>
                 </div>
 
-                <div class="form-group">
-                    <label for="songRequest">Song Request</label>
-                    <input type="text" id="songRequest" placeholder="Song title">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message to the Couple</label>
-                    <textarea id="message" rows="5" placeholder="Leave your well wishes here..."></textarea>
-                </div>
+                <section class="confirmation-note" aria-labelledby="confirmationHeading">
+                    <p class="group-label" id="confirmationHeading">One Last Check 🤍</p>
+                    <p>Please make sure the information above is correct before submitting.</p>
+                    <p><strong>We have received your RSVP once you see the confirmation screen.</strong></p>
+                </section>
 
                 <button type="submit" class="submit-btn">Submit RSVP</button>
                 <p class="form-status" id="formStatus" aria-live="polite"></p>
@@ -77,9 +106,24 @@
 
         <section class="rsvp-card success-card" id="successCard" hidden>
             <div class="success-icon">&hearts;</div>
-            <h2>Thank You!</h2>
-            <p>Your RSVP has been sent.</p>
-            <a href="../index.html" class="submit-btn">Return to Invitation</a>
+            <div id="attendingConfirmation">
+                <h2>We'll See You There! 🤍</h2>
+                <p>Thank you for confirming your attendance!</p>
+                <p>We're so happy that you'll be celebrating this beautiful day with us.</p>
+                <p class="event-details"><strong>March 20, 2027</strong><br><strong>Concepcion &amp; Capas, Tarlac</strong></p>
+                <p>We can't wait to celebrate, laugh, eat, dance, and make wonderful memories with you.</p>
+                <p>With love,<br><strong>Weng &amp; Tere</strong> 💍</p>
+            </div>
+            <div id="decliningConfirmation" hidden>
+                <h2>You'll Be Missed 🤍</h2>
+                <p>Thank you for letting us know.</p>
+                <p>We're sorry you won't be able to celebrate with us in person, but we're grateful for your love and support as we begin this new chapter together.</p>
+                <p>With love,<br><strong>Weng &amp; Tere</strong> 💍</p>
+            </div>
+            <div class="success-actions">
+                <a href="../index.html#gifts" class="submit-btn">View Gift Options</a>
+                <a href="../index.html" class="submit-btn secondary-btn">Return to Invitation</a>
+            </div>
         </section>
     </main>
 
