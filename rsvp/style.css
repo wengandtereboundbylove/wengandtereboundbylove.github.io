@@ -287,6 +287,8 @@ button {
 
 .confirmation-note {
     margin-top: 30px;
+    background: rgba(195, 152, 152, 0.22);
+    border-color: rgba(136, 119, 109, 0.32);
 }
 
 .confirmation-note .group-label {
@@ -394,8 +396,8 @@ select:focus {
 
 .option-card:has(input:checked) {
     border-color: var(--rose);
-    background: linear-gradient(135deg, rgba(219, 181, 181, 0.2), rgba(195, 152, 152, 0.12));
-    box-shadow: inset 0 0 0 1px rgba(219, 181, 181, 0.25);
+    background: var(--rose);
+    box-shadow: inset 0 0 0 2px var(--blush);
 }
 
 .submit-btn {
@@ -404,8 +406,8 @@ select:focus {
     justify-content: center;
     min-height: 54px;
     border: none;
-    background: linear-gradient(135deg, var(--rose) 0%, var(--blush) 100%);
-    color: var(--text-dark);
+    background: #70233A;
+    color: var(--cream);
     letter-spacing: 3px;
     font-size: 11px;
     text-transform: uppercase;
@@ -413,13 +415,14 @@ select:focus {
     transition: var(--transition);
     border-radius: 999px;
     padding: 0 28px;
-    box-shadow: 0 10px 24px rgba(152, 112, 112, 0.24);
+    box-shadow: 0 10px 24px rgba(84, 35, 51, 0.24);
     font-weight: 600;
 }
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 14px 28px rgba(152, 112, 112, 0.28);
+    background: #542333;
+    box-shadow: 0 14px 28px rgba(84, 35, 51, 0.3);
 }
 
 .submit-btn:disabled {
