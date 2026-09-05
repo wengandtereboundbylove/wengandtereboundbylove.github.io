@@ -2426,6 +2426,120 @@ body {
     border-color: #542333 !important;
 }
 
+/* Keep the wedding-day details readable on the dusty-rose panel. */
+#details {
+    color: #FFF8F0;
+}
+
+#details h2,
+#details .detail-card h3 {
+    color: #FFF8F0 !important;
+}
+
+#details .quick-detail span,
+#details .guest-info-card span,
+#details .detail-card > .label {
+    color: #F4E7DE !important;
+    opacity: 1;
+}
+
+#details .quick-detail strong,
+#details .guest-info-card p,
+#details .detail-card > p:not(.label) {
+    color: #FFF8F0 !important;
+}
+
+#details .quick-detail small {
+    color: #F8EEE8 !important;
+    opacity: 1;
+}
+
+#details .quick-detail,
+#details .detail-card,
+#details .guest-info-card {
+    border-color: rgba(255, 248, 240, 0.86) !important;
+}
+
+#details .details-rsvp-cta {
+    color: #542333;
+}
+
+#details .details-rsvp-cta .section-subtitle,
+#details .details-rsvp-deadline {
+    color: #70233A !important;
+}
+
+#details .details-rsvp-cta h3 {
+    color: #542333 !important;
+}
+
+/* Keep the map, guest requests, photo album, and FAQ copy readable. */
+#getting-there,
+#requests,
+#photos {
+    color: #FFF8F0;
+}
+
+#getting-there .map-note span,
+#getting-there .map-note p,
+#getting-there .map-card p,
+#getting-there .map-card a,
+#requests .section-subtitle,
+#requests h2,
+#requests .request-item h3,
+#requests .request-item p,
+#requests .request-item p strong,
+#photos .section-subtitle,
+#photos h2,
+#photos .photos-card p,
+#photos .photos-card .photos-question,
+#photos .photos-album-link,
+#photos .photos-card .photos-signoff {
+    color: #FFF8F0 !important;
+    opacity: 1;
+}
+
+#requests .request-item p strong {
+    color: #FFF8F0 !important;
+}
+
+#getting-there .map-note span,
+#requests .section-subtitle,
+#photos .section-subtitle {
+    color: #F4E7DE !important;
+}
+
+#getting-there .map-card a {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+#getting-there .map-note,
+#getting-there .map-card,
+#requests .request-item,
+#photos .photos-card {
+    border-color: rgba(255, 248, 240, 0.86) !important;
+}
+
+#faq .section-subtitle,
+#faq h2,
+#faq .faq-toggle,
+#faq .faq-answer p {
+    color: #542333 !important;
+    opacity: 1;
+}
+
+#faq .faq-toggle {
+    background: #FFF8F0;
+    border-color: #B6A394;
+}
+
+#faq .faq-answer {
+    background: rgba(255, 248, 240, 0.72);
+    border-color: #B6A394;
+}
+
 /* Gift cards: high-contrast copy on the burgundy panel. */
 #gifts .gift-card {
     background: rgba(84, 35, 51, .22) !important;
