@@ -728,9 +728,20 @@ if (openInvitation) {
 /* Keep the optional playlist near the end, after the wedding essentials. */
 const musicSection = document.getElementById("music");
 const rsvpSection = document.getElementById("rsvp");
+const siteCredit = document.querySelector(".site-credit");
+const floatingRsvpButton = document.querySelector(".floating-rsvp-button");
 
 if (musicSection && rsvpSection && musicSection.parentElement === rsvpSection.parentElement) {
     rsvpSection.parentElement.insertBefore(musicSection, rsvpSection);
+}
+
+/* Keep the floating RSVP link from covering the site credit at the bottom. */
+if (siteCredit && floatingRsvpButton && "IntersectionObserver" in window) {
+    const footerObserver = new IntersectionObserver(([entry]) => {
+        floatingRsvpButton.classList.toggle("is-footer-visible", entry.isIntersecting);
+    });
+
+    footerObserver.observe(siteCredit);
 }
 
 /* ==========================================
