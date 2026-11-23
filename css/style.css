@@ -1585,7 +1585,13 @@ section h2 {
     letter-spacing: 3px;
     text-transform: uppercase;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.floating-rsvp-button.is-footer-visible {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
 
 .floating-rsvp-button:hover {
